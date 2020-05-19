@@ -34,7 +34,7 @@
       </div>
     </div>
 
-    <div :class="['wizard-card-footer', 'clearfix', { footerClass: footerClassConditional }]" v-if="!hideButtons">
+    <div :class="['wizard-card-footer', 'clearfix', { 'wizard-card-footer-custom-class': footerClassConditional }]" v-if="!hideButtons">
       <slot name="footer"
             v-bind="slotProps">
         <div class="wizard-footer-left">
@@ -166,10 +166,6 @@
        *
        * Applies to the footer
        */
-      footerClass: {
-        type: String,
-        default: ''
-      },
       footerClassConditional: {
         type: Boolean,
         default: false
